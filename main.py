@@ -10,7 +10,7 @@ screen = pygame.display.set_mode((n, m))
 done = False
 
 number_of_lifes = 5
-life = pygame.transform.scale(pygame.image.load("Жизнь.jpg"), (27, 27))
+life = pygame.transform.scale(pygame.image.load("images\Жизнь.jpg"), (27, 27))
 clock = pygame.time.Clock()
 ball_radius = 10
 ball = Circle(n//2,m//2, 2*ball_radius)
@@ -18,10 +18,10 @@ platform = pygame.Rect(n//2, 0.95 * m, n // 8, m // 35)
 tiles = [pygame.Rect(50*n//(6*n+50) + (300*n // (6*n+50))*i, 30+20*j, 250*n // (6*n + 50), 10) for i in range(10*n//500) for j in range(4)]
 bonuses = []
 size = (45, 45)
-buff_extend_platform = Extend_platform(duration_of_buff=3000, image=pygame.transform.scale(pygame.image.load("extend.png"), size))
-buff_slower = Slower(                  duration_of_buff=6000, image=pygame.transform.scale(pygame.image.load("slower.png"), size))
-buff_reverse = ContiniousBuff(         duration_of_buff=5000, image=pygame.transform.scale(pygame.image.load("reverse.png"), size))
-buff_movement = Movement(              duration_of_buff=4000, image=pygame.transform.scale(pygame.image.load("movement.png"), size))
+buff_extend_platform = Extend_platform(duration_of_buff=3000, image=pygame.transform.scale(pygame.image.load("images\extend.png"), size))
+buff_slower = Slower(                  duration_of_buff=6000, image=pygame.transform.scale(pygame.image.load("images\slower.png"), size))
+buff_reverse = ContiniousBuff(         duration_of_buff=5000, image=pygame.transform.scale(pygame.image.load("images\reverse.png"), size))
+buff_movement = Movement(              duration_of_buff=4000, image=pygame.transform.scale(pygame.image.load("images\movement.png"), size))
 
 
 while not done:
